@@ -8,7 +8,14 @@ idade = int(input("Idade: "))
 email = input("Email: ")
 telefone = int(input("Telefone: "))
 
-custo = float(input("Custo do projeto: "))
+
+while True:
+    custo = float(input("Custo do projeto: "))
+    if custo <= 6000:
+        break
+    else:
+        print("\033[31mCusto inválido!! (O valor deve ser menor ou igual a 6000)\033[m\n")
+        
 percentual_de_lucro =  custo - decrement(float(input("Qual o percentual de lucro desejado: ")), custo)
 
 
